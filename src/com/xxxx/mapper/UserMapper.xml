@@ -7,5 +7,8 @@
     <select id="queryUserByName" parameterType="String" resultType="com.xxxx.entity.User">
 		select * from tb_user where userName = #{userName}
     </select>
+    <select id="smenu" parameterType="Int" resultType="com.xxxx.entity.SMenu">
+        SELECT b.sFile,b.Link FROM mainmenu a, smenu b WHERE b.f_id=a.id AND b.f_id = #{id}
+    </select>
 
 </mapper>
